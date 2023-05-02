@@ -3,7 +3,7 @@
 .nav {
   position: fixed;
   background-size: cover;
-  background-color: #b1d4e0;
+  background-color: $backgroundFirst;
   color: white;
   height: 4rem;
   width: 100%;
@@ -19,7 +19,8 @@
   &__item {
     &:hover {
       cursor: pointer;
-      color: $backgroundSecond;
+      color: $backgroundThird;
+      transition: ease-in-out 450ms;
     }
   }
   a {
