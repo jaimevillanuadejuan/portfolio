@@ -1,4 +1,3 @@
-import React from "react";
 import "./NavBar.scss";
 // import cv from "/src/assets/cv/JaimeVillanuaDeJuan.pdf";
 
@@ -12,14 +11,14 @@ function NavBar() {
 
   return (
     <div className="nav">
-      <div className="nav__item" onClick={() => doClick("about me")}>
-        ABOUT ME
+      <div className="nav__item" onClick={() => doClick("about")}>
+        <p className="nav__item-title">ABOUT</p>
       </div>
       <div className="nav__item" onClick={() => doClick("projects")}>
-        PROJECTS
+        <p className="nav__item-title">PROJECTS</p>
       </div>
       <div className="nav__item" onClick={() => doClick("contact")}>
-        CONTACT
+        <p className="nav__item-title">CONTACT</p>
       </div>
     </div>
   );

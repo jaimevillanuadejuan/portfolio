@@ -1,8 +1,8 @@
-@import "../../styles/variables";
-
-.main {
-  font-family: sans-serif;
-  padding: 0 4rem;
+@use "../../styles/fonts" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+#about {
+  max-height: 500px;
   font-weight: 800;
   font-size: 40px;
   text-align: center;
@@ -11,4 +11,8 @@
   align-items: center;
   min-height: 70vh;
   background: $backgroundSecond;
+  padding: 0 4rem;
+}
+.text {
+  max-height: 400px;
 }

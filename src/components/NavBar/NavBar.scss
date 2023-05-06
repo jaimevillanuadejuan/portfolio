@@ -1,4 +1,6 @@
-@import "../../styles/variables";
+@use "../../styles/fonts" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .nav {
   position: fixed;
@@ -9,18 +11,18 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 1rem;
   z-index: 1;
-  @media (min-width: $tablet-width) {
-    padding: 0 4rem;
+  overflow-y: none;
+  @include tablet {
+    padding: 0 2rem;
   }
-  overflow-y: auto;
   &__item {
     &:hover {
       cursor: pointer;
       color: $backgroundThird;
-      transition: ease-in-out 450ms;
+      transition: ease-in-out 250ms;
     }
   }
   a {

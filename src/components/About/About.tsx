@@ -1,15 +1,15 @@
-import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
-import "./Main.scss";
+import "./About.scss";
 //importing typewriter-effect
 
-const Main = () => {
+const AboutMe = () => {
+  //We initialize the array of sentences that are gonna display when TypeWriter renders
   const [text] = useTypewriter({
     words: [
       "Hi 👋, I'm Jaime Villanua De Juan",
       "Welcome to my portfolio!",
       "Let me introduce myself :)",
-      "I'm a Full Stack Developer👨‍💻",
+      "I'm a Full Stack Developer 👨‍💻",
       "I love 🖥️, playing 🎮 and drinking 🍵",
       "I'm also a huge ⚽ fan",
       "Feel free to check out any of my projects😇",
@@ -17,11 +17,13 @@ const Main = () => {
     loop: false,
   });
   return (
-    <div className="main">
-      <span aria-label="something">{text}</span>
+    <div id="about">
+      <p className="text">
+        <span>{text}</span>
+      </p>
     </div>
   );
 };
 
 //
-export default Main;
+export default AboutMe;
