@@ -1,6 +1,5 @@
 import "./Projects.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
 import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
@@ -19,11 +18,11 @@ const Projects = () => {
             alt="JAMES V Website preview"
           />
           <ul className="projects__item-buttons">
-            <Link to="https://jamesvmusic.com/">
+            <a href="https://jamesvmusic.com/">
               <button className="projects__item-website-button">
                 SEE WEBSITE
               </button>
-            </Link>
+            </a>
           </ul>
         </li>
         <li className="projects__item">
@@ -34,16 +33,16 @@ const Projects = () => {
             alt="RaveFinder Website preview"
           />
           <ul className="projects__item-buttons">
-            <Link to="https://github.com/jaimevillanuadejuan/RaveFinder">
+            <a href="https://github.com/jaimevillanuadejuan/RaveFinder">
               <button className="projects__item-repo-button">
                 SEE GITHUB REPO
               </button>
-            </Link>
-            <Link to="https://ravefinder.netlify.app/">
+            </a>
+            <a href="https://ravefinder.netlify.app/">
               <button className="projects__item-website-button">
                 SEE WEBSITE
               </button>
-            </Link>
+            </a>
           </ul>
         </li>
         <li className="projects__item">
@@ -54,11 +53,11 @@ const Projects = () => {
             alt="BrainFlix Website preview"
           />
           <ul className="projects__item-buttons">
-            <Link to="https://github.com/jaimevillanuadejuan/brainflix">
+            <a href="https://github.com/jaimevillanuadejuan/brainflix">
               <button className="projects__item-repo-button">
                 SEE GITHUB REPO
               </button>
-            </Link>
+            </a>
           </ul>
         </li>
       </ul>

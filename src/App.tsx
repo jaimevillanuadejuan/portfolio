@@ -6,6 +6,7 @@ import About from "./components/About/About";
 
 import "./App.scss";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <NavBar />
       <About />
       <Projects />
+      <Contact />
     </>
   );
 }

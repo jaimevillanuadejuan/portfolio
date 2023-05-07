@@ -1,0 +1,106 @@
+@use "../../styles/fonts" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.contact {
+  max-height: 100vh;
+  background-color: $backgroundFourth;
+  scroll-snap-align: center;
+  padding: 2rem 1rem 2rem;
+  @include tablet {
+    padding: 3rem 2rem 0;
+  }
+  color: $backgroundFirst;
+  display: grid;
+  grid-template-areas:
+    "top"
+    "bottom";
+  grid-template-rows: 3fr 1fr;
+  @include tablet {
+    grid-template-areas: "left right";
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+  }
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  &__button {
+    margin: 0 auto;
+  }
+  &__input {
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+  }
+  &__text {
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    top: 0;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials {
+  display: flex;
+  align-items: flex-start;
+  @include tablet {
+    align-items: center;
+  }
+  @include desktop {
+    align-items: start;
+    margin-top: 14rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2rem;
+    @include tablet {
+      display: grid;
+      grid-template-areas:
+        "1 2"
+        "3 4";
+      width: 100%;
+      grid-gap: 3rem;
+      height: fit-content;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  svg {
+    width: 4rem;
+    fill: $backgroundFirst;
+    height: 5rem;
+    cursor: pointer;
+    @include tablet {
+      width: 5rem;
+    }
+
+    @include desktop {
+      width: 10rem;
+      height: 7rem;
+    }
+    transition-duration: 100ms;
+    &:hover {
+      transition-duration: 100ms;
+      transition-delay: 50ms;
+      animation-timing-function: ease-in;
+      fill: $main;
+    }
+  }
+}
