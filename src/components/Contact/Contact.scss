@@ -4,13 +4,13 @@
 
 .contact {
   max-height: 100vh;
-  background-color: $backgroundFourth;
+  background-color: $backgroundFirst;
   scroll-snap-align: center;
   padding: 2rem 1rem 2rem;
   @include tablet {
     padding: 3rem 2rem 0;
   }
-  color: $backgroundFirst;
+  color: white;
   display: grid;
   grid-template-areas:
     "top"
@@ -47,6 +47,10 @@
     height: 10rem;
     display: flex;
     top: 0;
+  }
+  &__button {
+    background-color: $backgroundThird;
+    box-shadow: 3px 3px 3px 3px rgb(139, 186, 221);
   }
 }
 
