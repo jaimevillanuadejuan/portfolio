@@ -20,8 +20,13 @@ function NavBar() {
       <div className="nav__item" onClick={() => doClick("contact")}>
         <p className="nav__item-title">CONTACT</p>
       </div>
-      <div className="nav__item" onClick={() => doClick("contact")}>
-        <p className="nav__item-title">CV</p>
+      <div className="nav__item">
+        <a
+          href="https://github.com/jaimevillanuadejuan/brainflix"
+          className="nav__item-title nav__item-link"
+        >
+          CV
+        </a>
       </div>
     </div>
   );

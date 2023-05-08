@@ -15,7 +15,7 @@ const Projects = () => {
           <p className="projects__item-description">
             JAMES V is a Full Stack application made in collaboration with
             another Full Stack Developer for the Vancouver based artist{" "}
-            <a className="link" href="https://jamesvmusic.com/">
+            <a className="projects__item-link" href="https://jamesvmusic.com/">
               {" "}
               JAMES V
             </a>

@@ -19,12 +19,16 @@
     padding: 0 2rem;
   }
   &__item {
-    &:hover {
-      cursor: pointer;
-      color: $backgroundThird;
-      transition: ease-in-out 250ms;
+    &-title,
+    &-link {
+      &:hover {
+        cursor: pointer;
+        color: $backgroundThird;
+        transition: ease-in-out 250ms;
+      }
     }
   }
+
   a {
     color: white;
   }

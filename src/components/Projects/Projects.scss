@@ -42,6 +42,17 @@
       color: white;
       font-family: "FuturaMdMedium";
     }
+    &-link {
+      color: $backgroundSecond;
+      font-family: "FuturaMdMedium";
+      &:active,
+      &:focus {
+        color: $backgroundSecond;
+      }
+      &:hover {
+        color: $backgroundFourth;
+      }
+    }
     &-cover {
       height: 280px;
       width: 100%;
@@ -73,18 +84,5 @@
         flex-direction: row;
       }
     }
-  }
-}
-.link {
-  text-decoration: none;
-  text-transform: capitalize;
-  color: $backgroundSecond;
-  font-family: "FuturaMdMedium";
-  &:active,
-  &:focus {
-    color: $backgroundSecond;
-  }
-  &:hover {
-    color: $backgroundFourth;
   }
 }
