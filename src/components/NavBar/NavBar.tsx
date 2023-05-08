@@ -20,6 +20,9 @@ function NavBar() {
       <div className="nav__item" onClick={() => doClick("contact")}>
         <p className="nav__item-title">CONTACT</p>
       </div>
+      <div className="nav__item" onClick={() => doClick("contact")}>
+        <p className="nav__item-title">CV</p>
+      </div>
     </div>
   );
 }

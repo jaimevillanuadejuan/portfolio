@@ -1,6 +1,8 @@
 import React, { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
+import { ReactComponent as Gh } from "../../assets/svg/gh.svg";
+import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
 import "./Contact.scss";
 
@@ -55,7 +57,7 @@ const Contact = () => {
   return (
     <div className="contact" id="contact">
       <form className="email" ref={ref} onSubmit={handleSubmit} action="">
-        <h1>GET IN TOUCH WITH ME</h1>
+        <h1 className="email__title">GET IN TOUCH WITH ME</h1>
         <input
           className="email__input"
           type="text"
@@ -91,8 +93,14 @@ const Contact = () => {
       </form>
       <div className="socials">
         <div className="socials__container">
-          <a href="https://www.linkedin.com/in/jaimevillanuadejuan/">
+          <a href="https://www.linkedin.com/in/jaime-villanua-de-juan">
             <Linkedin />
+          </a>
+          <a href="https://github.com/jaimevillanuadejuan">
+            <Gh />
+          </a>
+          <a href="https://drive.google.com/file/d/1MgOr1HKS4lAessyCdZrJ_pbCGyGOFNAK/view?usp=sharing">
+            <Cv />
           </a>
         </div>
       </div>
