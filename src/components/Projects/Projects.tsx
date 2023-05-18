@@ -40,7 +40,7 @@ const Projects = () => {
         <li className="projects__item">
           <h3 className="projects__item-title">RaveFinder</h3>
           <p className="projects__item-description">
-            RaveFinder application is a promotional searvh engine where users
+            RaveFinder application is a promotional search engine where users
             can look for concerts where their favorite artists are playing, find
             a safe purchase link to buy the ticket for that event and find out
             about other upcoming events. This is a Front End application made in
