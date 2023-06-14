@@ -12,6 +12,8 @@ const Contact = () => {
   const [empty, setEmpty] = useState(false);
   const [reload, setReload] = useState(0);
 
+  const linkedin = require("../../assets/svg/linkedin.svg") as string;
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (

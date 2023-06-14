@@ -89,17 +89,14 @@ const Projects = () => {
           </ul>
         </li>
         <li className="projects__item">
-          <h3 className="projects__item-title">
-            Tutoring System -Final Degree Project
-          </h3>
+          <h3 className="projects__item-title">Tutoring System</h3>
           <p className="projects__item-description">
             Tutoring System is a management system for tutorials and reviews of
             practices and exams developed with the purpose of it being used by
-            teachers and students of the Higher Technical School of Computer
-            Engineers of the UPM and by other centers. This project's UI was
-            made using PHP, HTML, CSS, and Full Calendar. Regarding the Back
-            End, the tutoring's system was built with XAMPP, phpMyAdmin, MySQL,
-            Apache and Google Calendar's API.
+            teachers and students. This project's UI was made using PHP, HTML,
+            CSS, and Full Calendar. Regarding the Back End, the tutoring's
+            system was built with XAMPP, phpMyAdmin, MySQL, Apache and Google
+            Calendar's API.
           </p>
           <img
             src={tutoringSystemCover}
