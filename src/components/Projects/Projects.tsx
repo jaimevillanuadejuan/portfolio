@@ -90,7 +90,7 @@ const Projects = () => {
         </li>
         <li className="projects__item">
           <h3 className="projects__item-title">
-            Tutoring System (Final Degree Project)
+            Tutoring System -Final Degree Project
           </h3>
           <p className="projects__item-description">
             Tutoring System is a management system for tutorials and reviews of
