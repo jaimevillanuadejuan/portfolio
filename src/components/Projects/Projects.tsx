@@ -1,5 +1,4 @@
 import "./Projects.scss";
-import { useState } from "react";
 
 import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
 import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
@@ -7,10 +6,24 @@ import brainflixCover from "../../assets/covers/brainflix-thumbnail.png";
 import tutoringSystemCover from "../../assets/covers/tutoring-system-cover.png";
 
 const Projects = () => {
-  const [isClicked, setIsClicked] = useState(false);
   return (
     <div id="projects">
       <ul className="projects__list">
+        <li className="projects__item">
+          <h3 className="projects__item-title">StockWorld</h3>
+          <p className="projects__item-description">
+            StockWorld is a Full Stack application where users can buy stocks,
+            retrieve their portfolio, and comment on the platform interacting
+            with other users.
+            <br></br>I used React, HTML5, JavaScript, SASS, and Figma to
+            complete a high-quality Front End design and user interface,
+            following Agile principles during the development cycle. For
+            developing the Back-End, I built an API on C#, and .NET using Visual
+            Studio Code, utilizing EF Core for communicating with the database
+            running on Microsoft SQL Server, and JWT and Identity for managing
+            the user authentication.
+          </p>
+        </li>
         <li className="projects__item">
           <h3 className="projects__item-title">JAMES V</h3>
           <p className="projects__item-description">
