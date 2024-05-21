@@ -99,7 +99,7 @@ const Contact = () => {
           <a href="https://github.com/jaimevillanuadejuan">
             <Gh />
           </a>
-          <a href="https://drive.google.com/file/d/1LoMIBdM78uV-9lWFV-xa8r2bzEmzolEL/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1YnxlpK1VsFh6ldZY-J49JrGNiip7Ys6E/view?usp=sharing">
             <Cv />
           </a>
         </div>
