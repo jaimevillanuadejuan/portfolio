@@ -1,6 +1,6 @@
 import "./Projects.scss";
 import { useState } from "react";
-
+import vocalresonyCover from "../../assets/covers/vocalresony-thumbnail.jpg";
 import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
 import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
 import brainflixCover from "../../assets/covers/brainflix-thumbnail.png";
@@ -10,6 +10,37 @@ const Projects = () => {
   return (
     <div id="projects">
       <ul className="projects__list">
+        <li className="projects__item">
+          <h3 className="projects__item-title">Vocal Resony</h3>
+          <p className="projects__item-description">
+            Vocal Resony is an educational platform with an integrated eCommerce
+            store designed to help you learn about singing in an easy and fun
+            way.
+            <a
+              className="projects__item-link"
+              href="https://vocal-resony.web.app/"
+            >
+              {" "}
+              Vocal Resony{" "}
+            </a>
+            <br></br>UI designed on Canva and developed on React.JS, JavaScript,
+            HTML5, Sass. Backend system is built with Node.js, Vite and
+            Firebase. Users to purchase courses and subscriptions plans in the
+            built in eCommerce store.
+          </p>
+          <img
+            src={vocalresonyCover}
+            className="projects__item-cover"
+            alt="JAMES V Website preview"
+          />
+          <ul className="projects__item-buttons">
+            <a href="https://vocal-resony.web.app/">
+              <button className="projects__item-website-button">
+                SEE WEBSITE
+              </button>
+            </a>
+          </ul>
+        </li>
         <li className="projects__item">
           <h3 className="projects__item-title">JAMES V</h3>
           <p className="projects__item-description">
