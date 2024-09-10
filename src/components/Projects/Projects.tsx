@@ -1,10 +1,6 @@
 import "./Projects.scss";
-<<<<<<< HEAD
 import { useState } from "react";
 import vocalresonyCover from "../../assets/covers/vocalresony-thumbnail.jpg";
-=======
-
->>>>>>> a3421009ca6b234390cc99abb2b54231d2aafe5b
 import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
 import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
 import brainflixCover from "../../assets/covers/brainflix-thumbnail.png";
