@@ -22,7 +22,7 @@ function NavBar() {
       </div>
       <div className="nav__item">
         <a
-          href="https://drive.google.com/file/d/1LoMIBdM78uV-9lWFV-xa8r2bzEmzolEL/view?usp=sharing"
+          href="https://drive.google.com/file/d/1YnxlpK1VsFh6ldZY-J49JrGNiip7Ys6E/view?usp=sharing"
           className="nav__item-title nav__item-link"
         >
           CV

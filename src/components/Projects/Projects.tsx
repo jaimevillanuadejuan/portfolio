@@ -1,12 +1,16 @@
 import "./Projects.scss";
+<<<<<<< HEAD
 import { useState } from "react";
 import vocalresonyCover from "../../assets/covers/vocalresony-thumbnail.jpg";
+=======
+
+>>>>>>> a3421009ca6b234390cc99abb2b54231d2aafe5b
 import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
 import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
 import brainflixCover from "../../assets/covers/brainflix-thumbnail.png";
+import tutoringSystemCover from "../../assets/covers/tutoring-system-cover.png";
 
 const Projects = () => {
-  const [isClicked, setIsClicked] = useState(false);
   return (
     <div id="projects">
       <ul className="projects__list">
@@ -71,7 +75,7 @@ const Projects = () => {
         <li className="projects__item">
           <h3 className="projects__item-title">RaveFinder</h3>
           <p className="projects__item-description">
-            RaveFinder application is a promotional search engine where users
+            RaveFinder application is a promotional searvh engine where users
             can look for concerts where their favorite artists are playing, find
             a safe purchase link to buy the ticket for that event and find out
             about other upcoming events. This is a Front End application made in
@@ -112,6 +116,29 @@ const Projects = () => {
           />
           <ul className="projects__item-buttons">
             <a href="https://github.com/jaimevillanuadejuan/brainflix">
+              <button className="projects__item-repo-button">
+                SEE GITHUB REPO
+              </button>
+            </a>
+          </ul>
+        </li>
+        <li className="projects__item">
+          <h3 className="projects__item-title">Tutoring System</h3>
+          <p className="projects__item-description">
+            Tutoring System is a management system for tutorials and reviews of
+            practices and exams developed with the purpose of it being used by
+            teachers and students. This project's UI was made using PHP, HTML,
+            CSS, and Full Calendar. Regarding the Back End, the tutoring's
+            system was built with XAMPP, phpMyAdmin, MySQL, Apache and Google
+            Calendar's API.
+          </p>
+          <img
+            src={tutoringSystemCover}
+            className="projects__item-cover"
+            alt="Tutoring System preview"
+          />
+          <ul className="projects__item-buttons">
+            <a href="https://github.com/jaimevillanuadejuan/tutoring-system-final-degree-project-">
               <button className="projects__item-repo-button">
                 SEE GITHUB REPO
               </button>
