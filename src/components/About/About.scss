@@ -1,18 +1,108 @@
 @use "../../styles/fonts" as *;
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
-#about {
-  max-height: 500px;
-  font-weight: 800;
-  font-size: 40px;
-  text-align: center;
+
+.hero {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
-  background: $backgroundSecond;
-  padding: 0 4rem;
+  padding: $spacing-3xl $spacing-md;
+  background: linear-gradient(135deg, $color-bg-primary 0%, $color-bg-secondary 100%);
+  position: relative;
+  
+  @include tablet {
+    padding: $spacing-4xl $spacing-xl;
+  }
+  
+  &__content {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  &__text {
+    font-family: 'TrajanPro', serif;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    line-height: $line-height-relaxed;
+    
+    @include tablet {
+      font-size: $font-size-3xl;
+    }
+    
+    @include desktop {
+      font-size: $font-size-4xl;
+    }
+  }
+  
+  &__typewriter {
+    display: inline-block;
+  }
+  
+  &__cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+    color: $color-primary;
+  }
+  
+  &__scroll-indicator {
+    position: absolute;
+    bottom: $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-sm;
+    background: none;
+    border: none;
+    color: $color-primary;
+    cursor: pointer;
+    transition: color $duration-fast $ease-in-out;
+    
+    &:hover {
+      color: $color-primary-dark;
+    }
+    
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 4px;
+      border-radius: $radius-sm;
+    }
+  }
+  
+  &__scroll-text {
+    font-family: 'FuturaMdMedium', sans-serif;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  &__scroll-arrow {
+    width: 24px;
+    height: 24px;
+  }
 }
-.text {
-  max-height: 400px;
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-arrow {
+    animation: none;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+  }
+}
+

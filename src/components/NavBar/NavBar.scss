@@ -4,32 +4,105 @@
 
 .nav {
   position: fixed;
-  background-size: cover;
-  background-color: $backgroundFirst;
-  color: white;
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 1;
-  overflow-y: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: $spacing-md $spacing-md;
+  transition: all $duration-normal $ease-in-out;
+  
   @include tablet {
-    padding: 0 2rem;
+    padding: $spacing-lg $spacing-xl;
   }
-  &__item {
-    &-title,
-    &-link {
-      &:hover {
-        cursor: pointer;
-        color: $backgroundThird;
-        transition: ease-in-out 250ms;
-      }
+  
+  &--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-sm;
+  }
+  
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-lg;
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    @include tablet {
+      gap: $spacing-2xl;
     }
   }
-
-  a {
-    color: white;
+  
+  &__item {
+    position: relative;
+    cursor: pointer;
+    
+    &--active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $color-primary;
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    &-title {
+      font-family: 'TrajanPro', serif;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+      color: $color-text-primary;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color $duration-fast $ease-in-out;
+      
+      @include tablet {
+        font-size: $font-size-base;
+      }
+      
+      &:hover {
+        color: $color-primary;
+      }
+      
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 4px;
+        border-radius: $radius-sm;
+      }
+    }
+    
+    &-link {
+      text-decoration: none;
+      display: inline-block;
+    }
   }
 }
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: none;
+  }
+  
+  .nav__item-title {
+    transition: none;
+  }
+  
+  @keyframes slideIn {
+    from, to {
+      transform: scaleX(1);
+    }
+  }
+}
+

@@ -1,17 +1,19 @@
 @font-face {
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro";
   src: url("../assets/font/TrajanProRegular.woff2") format("woff2"),
     url("../assets/font/TrajanProRegular.woff") format("woff"),
     url("../assets/font/TrajanProRegular.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro";
   src: url("../assets/font/TrajanProBold.woff2") format("woff2"),
     url("../assets/font/TrajanProBold.woff") format("woff"),
     url("../assets/font/TrajanProBold.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -21,4 +23,6 @@
     url(../assets/font/FuturaMdMedium.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
+

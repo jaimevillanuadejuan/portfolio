@@ -2,87 +2,52 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
-#projects {
-  background-color: $backgroundThird;
-}
 .projects {
-  &__list {
-    padding: 2rem 1rem;
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  background: $color-bg-dark;
+  padding: $spacing-3xl $spacing-md;
+  
+  @include tablet {
+    padding: $spacing-4xl $spacing-xl;
+  }
+  
+  @include desktop {
+    padding: $spacing-5xl $spacing-2xl;
+  }
+  
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  &__title {
+    font-family: 'TrajanPro', serif;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-light;
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    
     @include tablet {
-      flex-wrap: wrap;
-      flex-direction: row;
-      padding: 3rem 3rem;
-      justify-content: space-between;
-      flex: 1;
+      font-size: $font-size-4xl;
     }
   }
-  &__item {
-    margin: 0;
+  
+  &__list {
+    list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    color: white;
-    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: $spacing-2xl;
+    align-items: stretch;
+    
     @include tablet {
-      flex: 1;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-3xl;
     }
-    &-title {
-      font-weight: 800;
-    }
-    &-description {
-      width: 280px;
-      height: 12rem;
-      color: white;
-      font-family: "FuturaMdMedium";
-    }
-    &-link {
-      color: $backgroundSecond;
-      font-family: "FuturaMdMedium";
-      &:active,
-      &:focus {
-        color: $backgroundSecond;
-      }
-      &:hover {
-        color: $backgroundFourth;
-      }
-    }
-    &-cover {
-      height: 280px;
-      width: 100%;
-      object-fit: cover;
-      line-height: 16px;
-      text-decoration: none;
-      border: 1px solid lightgrey;
-      filter: grayscale(85%);
-      transition-timing-function: ease-in;
-      transition-duration: 100ms;
-      @include tablet {
-        width: 300px;
-      }
-      &:hover {
-        transition-timing-function: ease-out;
-        transition-duration: 100ms;
-        filter: grayscale(0%);
-        cursor: pointer;
-      }
-    }
-    &-buttons {
-      list-style-type: none;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      @include desktop {
-        flex-direction: row;
-      }
+    
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
+

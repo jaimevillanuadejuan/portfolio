@@ -1,131 +1,46 @@
+import { motion } from 'framer-motion';
+import ProjectCard from './ProjectCard';
+import { projectsData } from '../../data/projectsData';
 import "./Projects.scss";
 
-import ravefinderCover from "../../assets/covers/ravefinder-thumbnail.png";
-import jamesvCover from "../../assets/covers/jamesv-thumbnail.png";
-import brainflixCover from "../../assets/covers/brainflix-thumbnail.png";
-import tutoringSystemCover from "../../assets/covers/tutoring-system-cover.png";
-
 const Projects = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
   return (
-    <div id="projects">
-      <ul className="projects__list">
-        <li className="projects__item">
-          <h3 className="projects__item-title">StockWorld</h3>
-          <p className="projects__item-description">
-            StockWorld is a Full Stack application where users can buy stocks,
-            retrieve their portfolio, and comment on the platform interacting
-            with other users.
-            <br></br>I used React, HTML5, JavaScript, SASS, and Figma to
-            complete a high-quality Front End design and user interface,
-            following Agile principles during the development cycle. For
-            developing the Back-End, I built an API on C#, and .NET using Visual
-            Studio Code, utilizing EF Core for communicating with the database
-            running on Microsoft SQL Server, and JWT and Identity for managing
-            the user authentication.
-          </p>
-        </li>
-        <li className="projects__item">
-          <h3 className="projects__item-title">JAMES V</h3>
-          <p className="projects__item-description">
-            JAMES V is a Full Stack application made in collaboration with
-            another Full Stack Developer for the Vancouver based artist{" "}
-            <a className="projects__item-link" href="https://jamesvmusic.com/">
-              {" "}
-              JAMES V
-            </a>
-            <br></br>To build an outstading interface, we used ReactJS for the
-            Front End. For the BackEnd we used FireBase for hosting the web
-            app's database and domain and creating cloud functions to retrieve
-            data automatically daily for the videos section.
-          </p>
-          <img
-            src={jamesvCover}
-            className="projects__item-cover"
-            alt="JAMES V Website preview"
-          />
-          <ul className="projects__item-buttons">
-            <a href="https://jamesvmusic.com/">
-              <button className="projects__item-website-button">
-                SEE WEBSITE
-              </button>
-            </a>
-          </ul>
-        </li>
-        <li className="projects__item">
-          <h3 className="projects__item-title">RaveFinder</h3>
-          <p className="projects__item-description">
-            RaveFinder application is a promotional searvh engine where users
-            can look for concerts where their favorite artists are playing, find
-            a safe purchase link to buy the ticket for that event and find out
-            about other upcoming events. This is a Front End application made in
-            ReactJS that utilizes TicketMaster's API to retrieve all the
-            information about the events.
-          </p>
-          <img
-            className="projects__item-cover"
-            src={ravefinderCover}
-            alt="RaveFinder Website preview"
-          />
-          <ul className="projects__item-buttons">
-            <a href="https://github.com/jaimevillanuadejuan/RaveFinder">
-              <button className="projects__item-repo-button">
-                SEE GITHUB REPO
-              </button>
-            </a>
-            <a href="https://ravefinder.netlify.app/">
-              <button className="projects__item-website-button">
-                SEE WEBSITE
-              </button>
-            </a>
-          </ul>
-        </li>
-        <li className="projects__item">
-          <h3 className="projects__item-title">BrainFlix</h3>
-          <p className="projects__item-description">
-            BrainFlix is a video streaming website similar in design and
-            functionality to Vimeo. The tech stack of this project includes
-            ReactJs for the Front End and ExpressJs for the Back End API. The
-            user can select and view videos from a suggestion bar as well as
-            upload videos
-          </p>
-          <img
-            src={brainflixCover}
-            className="projects__item-cover"
-            alt="BrainFlix Website preview"
-          />
-          <ul className="projects__item-buttons">
-            <a href="https://github.com/jaimevillanuadejuan/brainflix">
-              <button className="projects__item-repo-button">
-                SEE GITHUB REPO
-              </button>
-            </a>
-          </ul>
-        </li>
-        <li className="projects__item">
-          <h3 className="projects__item-title">Tutoring System</h3>
-          <p className="projects__item-description">
-            Tutoring System is a management system for tutorials and reviews of
-            practices and exams developed with the purpose of it being used by
-            teachers and students. This project's UI was made using PHP, HTML,
-            CSS, and Full Calendar. Regarding the Back End, the tutoring's
-            system was built with XAMPP, phpMyAdmin, MySQL, Apache and Google
-            Calendar's API.
-          </p>
-          <img
-            src={tutoringSystemCover}
-            className="projects__item-cover"
-            alt="Tutoring System preview"
-          />
-          <ul className="projects__item-buttons">
-            <a href="https://github.com/jaimevillanuadejuan/tutoring-system-final-degree-project-">
-              <button className="projects__item-repo-button">
-                SEE GITHUB REPO
-              </button>
-            </a>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <section id="projects" className="projects">
+      <div className="projects__container">
+        <motion.h2
+          className="projects__title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          Featured Projects
+        </motion.h2>
+
+        <motion.ul
+          className="projects__list"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {projectsData.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </motion.ul>
+      </div>
+    </section>
   );
 };
 
