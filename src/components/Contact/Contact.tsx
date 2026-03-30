@@ -213,7 +213,7 @@ const Contact = () => {
               <Gh />
             </motion.a>
             <motion.a
-              href="https://drive.google.com/file/d/1YnxlpK1VsFh6ldZY-J49JrGNiip7Ys6E/view?usp=sharing"
+              href="https://drive.google.com/file/d/1s29qMM1lGH6AGETgVRV4xVfdgyRajMaX/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="contact__social-link"
