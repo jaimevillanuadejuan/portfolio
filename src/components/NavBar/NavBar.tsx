@@ -15,7 +15,7 @@ const navItems: NavItem[] = [
   { 
     id: 'cv', 
     label: 'CV',
-    href: 'https://drive.google.com/file/d/1YnxlpK1VsFh6ldZY-J49JrGNiip7Ys6E/view?usp=sharing'
+    href: 'https://drive.google.com/file/d/1s29qMM1lGH6AGETgVRV4xVfdgyRajMaX/view?usp=sharing'
   }
 ];
 
